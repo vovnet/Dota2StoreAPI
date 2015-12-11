@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace DotaStoreAPI
+namespace DotaApiProject
 {
     public class StoreItem
     {
-        public string clasSid { get; set; }
+        public string clasId { get; set; }
         public string instanceId { get; set; }
         public string price { get; set; }
         public string offerst { get; set; }
@@ -24,7 +23,7 @@ namespace DotaStoreAPI
         {
             string[] parts = line.Split(';');  //Разделитель в CSV файле.
             if (parts.Length < 9) return;
-            clasSid = parts[0];
+            clasId = parts[0];
             instanceId = parts[1];
             price = parts[2];
             offerst = parts[3];
